@@ -1,0 +1,216 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Crystal_GND24 Y1
+U 1 1 6369840D
+P 3000 3050
+F 0 "Y1" H 3194 3096 50  0000 L CNN
+F 1 "Crystal_GND24" H 3194 3005 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm" H 3000 3050 50  0001 C CNN
+F 3 "~" H 3000 3050 50  0001 C CNN
+	1    3000 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Oscillator:Si5351A-B-GT U1
+U 1 1 6369898B
+P 4150 3250
+F 0 "U1" H 4150 3250 50  0000 C CNN
+F 1 "Si5351A-B-GT" H 4700 3850 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 4150 2450 50  0001 C CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/Si5351-B.pdf" H 3800 3150 50  0001 C CNN
+	1    4150 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L xenir:Resistor R1
+U 1 1 63699097
+P 2100 3150
+F 0 "R1" V 2071 3218 28  0000 L CNN
+F 1 "10k" V 2128 3218 28  0000 L CNN
+F 2 "Xenir:Resistor 1206" H 2100 3050 50  0001 C CNN
+F 3 "" H 2100 3050 50  0001 C CNN
+	1    2100 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L xenir:Resistor R2
+U 1 1 6369A400
+P 2350 3150
+F 0 "R2" V 2321 3218 28  0000 L CNN
+F 1 "10k" V 2378 3218 28  0000 L CNN
+F 2 "Xenir:Resistor 1206" H 2350 3050 50  0001 C CNN
+F 3 "" H 2350 3050 50  0001 C CNN
+	1    2350 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 3450 2350 3450
+Wire Wire Line
+	2350 3450 2350 3350
+Wire Wire Line
+	3650 3550 2100 3550
+Wire Wire Line
+	2100 3550 2100 3350
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 636A5659
+P 2350 2800
+F 0 "#PWR0101" H 2350 2650 50  0001 C CNN
+F 1 "+3V3" H 2365 2973 50  0000 C CNN
+F 2 "" H 2350 2800 50  0001 C CNN
+F 3 "" H 2350 2800 50  0001 C CNN
+	1    2350 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 2950 2350 2850
+Wire Wire Line
+	2100 2950 2100 2850
+Wire Wire Line
+	2100 2850 2350 2850
+Connection ~ 2350 2850
+Wire Wire Line
+	2350 2850 2350 2800
+$Comp
+L power:+3V3 #PWR0102
+U 1 1 636A63BD
+P 4050 2550
+F 0 "#PWR0102" H 4050 2400 50  0001 C CNN
+F 1 "+3V3" H 4065 2723 50  0000 C CNN
+F 2 "" H 4050 2550 50  0001 C CNN
+F 3 "" H 4050 2550 50  0001 C CNN
+	1    4050 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2750 4250 2650
+Wire Wire Line
+	4250 2650 4050 2650
+Wire Wire Line
+	4050 2550 4050 2650
+Connection ~ 4050 2650
+Wire Wire Line
+	4050 2650 4050 2750
+$Comp
+L power:GND #PWR0103
+U 1 1 636A6FEC
+P 4150 3750
+F 0 "#PWR0103" H 4150 3500 50  0001 C CNN
+F 1 "GND" H 4155 3577 50  0000 C CNN
+F 2 "" H 4150 3750 50  0001 C CNN
+F 3 "" H 4150 3750 50  0001 C CNN
+	1    4150 3750
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 3050 2    50   Input ~ 0
+CLK0
+Text GLabel 4650 3250 2    50   Input ~ 0
+CLK1
+Text GLabel 4650 3450 2    50   Input ~ 0
+CLK2
+Wire Wire Line
+	3650 2950 3450 2950
+Wire Wire Line
+	3450 2950 3450 2850
+Wire Wire Line
+	3450 2850 3000 2850
+Wire Wire Line
+	3000 2850 3000 2900
+Wire Wire Line
+	3650 3150 3450 3150
+Wire Wire Line
+	3450 3150 3450 3250
+Wire Wire Line
+	3450 3250 3000 3250
+Wire Wire Line
+	3000 3250 3000 3200
+$Comp
+L power:GND #PWR0104
+U 1 1 636AC44A
+P 3200 3050
+F 0 "#PWR0104" H 3200 2800 50  0001 C CNN
+F 1 "GND" H 3205 2877 50  0000 C CNN
+F 2 "" H 3200 3050 50  0001 C CNN
+F 3 "" H 3200 3050 50  0001 C CNN
+	1    3200 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 636AC71C
+P 2800 3050
+F 0 "#PWR0105" H 2800 2800 50  0001 C CNN
+F 1 "GND" H 2805 2877 50  0000 C CNN
+F 2 "" H 2800 3050 50  0001 C CNN
+F 3 "" H 2800 3050 50  0001 C CNN
+	1    2800 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x07 J1
+U 1 1 636ACD5F
+P 5700 3200
+F 0 "J1" H 5850 3250 50  0000 C CNN
+F 1 "Conn_01x07" H 6000 3100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 5700 3200 50  0001 C CNN
+F 3 "~" H 5700 3200 50  0001 C CNN
+	1    5700 3200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 636B0190
+P 6350 2850
+F 0 "#PWR0106" H 6350 2700 50  0001 C CNN
+F 1 "+3V3" H 6365 3023 50  0000 C CNN
+F 2 "" H 6350 2850 50  0001 C CNN
+F 3 "" H 6350 2850 50  0001 C CNN
+	1    6350 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2900 6350 2850
+$Comp
+L power:GND #PWR0107
+U 1 1 636B1692
+P 6350 3000
+F 0 "#PWR0107" H 6350 2750 50  0001 C CNN
+F 1 "GND" H 6355 2827 50  0000 C CNN
+F 2 "" H 6350 3000 50  0001 C CNN
+F 3 "" H 6350 3000 50  0001 C CNN
+	1    6350 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 2900 6350 2900
+Wire Wire Line
+	5900 3000 6350 3000
+Text GLabel 2600 3550 3    50   Input ~ 0
+SDA
+Text GLabel 2600 3450 1    50   Input ~ 0
+SCL
+Text GLabel 5900 3100 2    50   Input ~ 0
+SDA
+Text GLabel 5900 3200 2    50   Input ~ 0
+SCL
+Text GLabel 5900 3500 2    50   Input ~ 0
+CLK2
+Text GLabel 5900 3400 2    50   Input ~ 0
+CLK1
+Text GLabel 5900 3300 2    50   Input ~ 0
+CLK0
+$EndSCHEMATC
