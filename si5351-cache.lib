@@ -82,6 +82,21 @@ X CLK1 9 500 0 100 L 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
+# Xenir_Capacitor
+#
+DEF Xenir_Capacitor C 0 40 Y Y 1 F N
+F0 "C" 0 125 28 H V C CNN
+F1 "Xenir_Capacitor" 0 -125 28 H V C CNN
+F2 "" 0 -150 50 H I C CNN
+F3 "" 0 -150 50 H I C CNN
+DRAW
+P 2 1 1 20 -30 -80 -30 80 N
+P 2 1 1 20 30 -80 30 80 N
+X ~ 1 -150 0 110 R 0 0 1 1 P
+X ~ 2 150 0 110 L 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
 # power_+3V3
 #
 DEF power_+3V3 #PWR 0 0 Y Y 1 F P
