@@ -36,7 +36,7 @@ F 3 "https://www.silabs.com/documents/public/data-sheets/Si5351-B.pdf" H 3800 31
 	1    0    0    -1  
 $EndComp
 $Comp
-L xenir:Resistor R1
+L si5351-rescue:Resistor-xenir R1
 U 1 1 63699097
 P 2100 3150
 F 0 "R1" V 2071 3218 28  0000 L CNN
@@ -47,7 +47,7 @@ F 3 "" H 2100 3050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L xenir:Resistor R2
+L si5351-rescue:Resistor-xenir R2
 U 1 1 6369A400
 P 2350 3150
 F 0 "R2" V 2321 3218 28  0000 L CNN
